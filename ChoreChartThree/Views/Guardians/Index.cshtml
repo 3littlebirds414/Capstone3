@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ChoreChartThree.Models.Guardian>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GuardianName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskApproval)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.GuardianName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskApproval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.GuardianId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.GuardianId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.GuardianId })
+            @Html.ActionLink("Dependent Information", "Index", "Dependents", new { id = item.ApplicationId }, null)
+            @Html.ActionLink("Chore Information", "Index", "Chores", new { id = item.ApplicationId }, null)
+        </td>
+    </tr>
+}
+
+</table>

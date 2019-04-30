@@ -15,7 +15,7 @@ namespace ChoreChartThree.Models
         [Required]
         [Display(Name = "Name")]
         public string GuardianName { get; set; }
-        public bool TaskApproval { get; set; }
+        public bool? TaskApproval { get; set; }
 
 
         [ForeignKey("ApplicationUser")]

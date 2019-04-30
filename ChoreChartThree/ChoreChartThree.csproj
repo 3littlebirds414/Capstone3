@@ -168,15 +168,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChoreController.cs" />
+    <Compile Include="Controllers\GuardiansController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201904281455278_Thing.cs" />
     <Compile Include="Migrations\201904281455278_Thing.Designer.cs">
       <DependentUpon>201904281455278_Thing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904291854051_Thing1.cs" />
+    <Compile Include="Migrations\201904291854051_Thing1.Designer.cs">
+      <DependentUpon>201904291854051_Thing1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -248,10 +256,19 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Upload\UploadFile.cshtml" />
+    <Content Include="Views\Guardians\Create.cshtml" />
+    <Content Include="Views\Guardians\Delete.cshtml" />
+    <Content Include="Views\Guardians\Edit.cshtml" />
+    <Content Include="Views\Guardians\Details.cshtml" />
+    <Content Include="Views\Guardians\Index.cshtml" />
+    <Content Include="Views\Role\Create.cshtml" />
+    <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\Role\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="UploadedFiles\" />
+    <Folder Include="Views\Chore\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -269,6 +286,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904281455278_Thing.resx">
       <DependentUpon>201904281455278_Thing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904291854051_Thing1.resx">
+      <DependentUpon>201904291854051_Thing1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
